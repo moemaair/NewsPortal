@@ -4,11 +4,13 @@ public class User {
     private int id;
     private String name;
     private String role;
+    private int departmentId; //connecting users to depart (1:M)R
 
-    public User(String name, String role) {
+    public User(String name, String role, int departmentId) {
         this.id = id;
         this.name = name;
         this.role = role;
+        this.departmentId = departmentId;
     }
 
     public int getId() {
