@@ -1,16 +1,29 @@
 package models;
 
-public class User {
-    private int id;
-    private String name;
-    private String role;
-    private int departmentId; //connecting users to depart (1:M)R
+import java.util.Objects;
 
-    public User(String name, String role, int departmentId) {
-        this.id = id;
+public class User {
+    private  int id;
+    private String name;
+    private String position;
+    private String role;
+
+    public User(String name, String position, String role) {
         this.name = name;
+        this.position = position;
         this.role = role;
-        this.departmentId = departmentId;
+    }
+
+    public String getName() {
+        return  name;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public String getRole() {
+        return role;
     }
 
     public int getId() {
@@ -21,19 +34,16 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return id == user.id && Objects.equals(name, user.name) && Objects.equals(position, user.position) && Objects.equals(role, user.role);
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, position, role);
     }
 }
