@@ -90,7 +90,7 @@ Replace :id with id of department</li>
 <li>you can query by passing the Id generated ,replace the is with the number provided, /li>
 
 ## Contributions
-for any queries , contributions to the project feel free to reach out  @karani.maina2010@gmail.com
+for any queries , contributions to the project feel free to reach out  @rageali12@gmail.com
  
 ## License
 ### License
